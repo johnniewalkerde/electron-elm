@@ -29,6 +29,8 @@
   },
   "homepage": "https://github.com/fulnir/elm-electron-hallo-welt#readme",
   "devDependencies": {
+    "elm": "*",
+    "electron": "*",
     "chokidar-cmd": "*",
     "electron-reload": "^1.2.1",
     "npm-run-all": "^4.0.2"

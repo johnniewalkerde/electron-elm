@@ -4,10 +4,10 @@
   "description": "Ein kleines Elm mit Electron Programm",
   "main": "main.js",
   "scripts": {
-    "elm": "elm make Main.elm --output elm.js || true",
-    "elm:watch": "chokidar '**/*.elm' -c 'npm run elm'",
+    "elm": "elm make main.elm --output elm.js || true",
+    "elm:watch": "chokidar-cmd \"**/*.elm\" -c \"npm run elm\" -t .",
     "start": "electron main.js",
-    "watch": "npm run start & npm run elm:watch & wait"
+    "watch": "run-p start elm:watch"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,9 @@
   },
   "homepage": "https://github.com/fulnir/elm-electron-hallo-welt#readme",
   "devDependencies": {
-    "electron-prebuilt": "^0.36.0"
-  }
+    "chokidar-cmd": "*",
+    "electron-reload": "^1.2.1",
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {}
 }

@@ -4,6 +4,8 @@ const electron = require('electron')
 const app = electron.app // this is our app
 const BrowserWindow = electron.BrowserWindow // This is a Module that creates windows  
 
+require('electron-reload')(__dirname)
+
 let mainWindow // saves a global reference to mainWindow so it doesn't get garbage collected
 
 app.on('ready', createWindow) // called when electron has initialized
